@@ -18,8 +18,3 @@ A simple task management module built with JavaScript. It validates task input b
 - **Input Validation**
 - **Modular Code Structure**
 
-## How to Run
-
-```bash
-node app.js
-```
