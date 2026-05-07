@@ -1,16 +1,24 @@
-# React + Vite
+# Product Listing - React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+A React app that renders a list of products using components and props. Built with Vite and styled using Tailwind CSS classes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project Structure
 
-## React Compiler
+```
+src/
+├── App.jsx              # Root component with product data
+├── components/
+│   └── Product.jsx      # Single product card component
+└── main.jsx             # Entry point
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Concepts Covered
 
-## Expanding the ESLint configuration
+- **React Components** — functional components
+- **Props** — passing product data to `Product` component
+- **Array Mapping** — rendering list of products with `.map()`
+- **JSX** — writing HTML inside JavaScript
+- **Vite** — React project setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
