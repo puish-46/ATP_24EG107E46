@@ -78,11 +78,11 @@ function App() {
               element: <UserList />,
             },
             {
-              path: "articles",
+              path: "users",
               element: <UserList />,
             },
             {
-              path: "write-article",
+              path: "authors",
               element: <AuthorList />,
             },
           ],

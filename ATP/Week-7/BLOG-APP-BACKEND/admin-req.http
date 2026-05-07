@@ -7,8 +7,11 @@ Content-Type: application/json
     "password":"ad1@1234"
 }
 
-###Read all users and authors (email)
+###Read all users (email)
 GET http://localhost:4000/admin-api/users
+
+###Read all authors (email)
+GET http://localhost:4000/admin-api/authors
 
 
 ###Block or active user and author

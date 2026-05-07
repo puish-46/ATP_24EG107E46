@@ -55,6 +55,9 @@ commonApp.post("/users", upload.single("profileImageUrl"), async (req, res) => {
   }
 });
 
+commonApp.get("/test", (req,res)=>{
+  res.send("Common API working");
+});
 
 //route for login
 commonApp.post("/login",async(req,res)=>{
@@ -65,7 +68,11 @@ commonApp.post("/login",async(req,res)=>{
     const user=await UserModel.findOne({email:email})
     //if email not exits
     if(!user){
-        return res.status(404).json({message:"Invalid email"})
+        return res.status(401).json({message:"Invalid email"})
+    }
+    // block login if admin has deactivated the account
+    if (!user.isUserActive) {
+      return res.status(403).json({message: "Your account has been deactivated by admin"});
     }
     //compare passwords
     const isMatch=await compare(password,user.password)
@@ -77,9 +84,9 @@ commonApp.post("/login",async(req,res)=>{
     const signedToken=sign({id:user._id,email:email,role:user.role,firstName:user.firstName,lastName:user.lastName,profileImageUrl:user.profileImageUrl},process.env.SECRET_KEY,{expiresIn:'1h'})
     //before sending res of token , store token in httponly cookie
     res.cookie("token",signedToken,{
-        httponly:true,
-        sameSite:"lax",   
-        secure:false
+        httpOnly:true,
+        sameSite:"none",   
+        secure:true
     });
     //remove password
     const UserObj=user.toObject()
@@ -88,14 +95,17 @@ commonApp.post("/login",async(req,res)=>{
     res.status(200).json({message:"Login Success",payload:UserObj})
 })
 
+commonApp.get("/login-test", (req,res)=>{
+  res.send("Login route section loaded");
+});
 
 //route for logout
 commonApp.get("/logout",(req,res)=>{
     //delete token from cookie storage
     res.clearCookie("token",{
         httponly:true,
-        sameSite:"lax",
-        secure:false
+        sameSite:"none",
+        secure:true
     });
     //send res
     res.status(200).json({message:"Logout Success"})
