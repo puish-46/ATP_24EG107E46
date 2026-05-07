@@ -1,16 +1,27 @@
-# React + Vite
+# User Form with Dynamic Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that demonstrates **controlled form inputs** and **dynamic table rendering**. Users can fill out a form and see their entries added to a live table — all handled with React component state.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Project Structure
 
-## React Compiler
+```
+User-form-with-dynamic-table/
+└── src/
+    ├── components/
+    │   ├── Navigation.jsx   # Top navigation bar
+    │   ├── UserForm.jsx     # Form + dynamic table
+    │   └── Footer.jsx       # Footer component
+    ├── App.jsx
+    └── main.jsx
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-  **User input form** to collect user details
+-  **Dynamic table** that updates in real-time as entries are added
+- **Navigation bar** and **Footer** for a complete page layout
+-  Pure React state — no external state library needed

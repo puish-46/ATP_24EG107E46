@@ -1,16 +1,32 @@
-# React + Vite
+# User Count React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that fetches a list of users from the **JSONPlaceholder API** and lets users track how many they've selected using the **React Context API** to share count state across components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Project Structure
 
-## React Compiler
+```
+user_count_react/
+└── src/
+    ├── components/
+    │   ├── UserCount.jsx   # Displays the current selected count
+    │   └── Users.jsx       # Fetches & displays user cards from API
+    ├── context/
+    │   └── UserContext.jsx  # Context provider for user count state
+    ├── App.jsx
+    └── main.jsx
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-  **Fetches users** from `https://jsonplaceholder.typicode.com/users` on mount
+-  Displays each user in a **card grid** (4 columns) with name and email
+-  Each card has an **"Add User"** button to increment the shared count
+-  **`UserCount`** component reads and displays the live total from Context
+-  Shows a **loading** state while fetching
+-  Shows an **error** message if the fetch fails
+
+---

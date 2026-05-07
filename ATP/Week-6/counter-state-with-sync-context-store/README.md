@@ -1,16 +1,30 @@
-# React + Vite
+# Counter State with Sync Context Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application demonstrating **shared state synchronization** across multiple independent counter components using the **React Context API**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Project Structure
 
-## React Compiler
+```
+counter-state-with-sync-context-store/
+└── src/
+    ├── components/
+    │   ├── EditCounter1.jsx   # Counter card #1
+    │   ├── EditCounter2.jsx   # Counter card #2
+    │   ├── EditCounter3.jsx   # Counter card #3
+    │   └── EditCounter4.jsx   # Counter card #4
+    ├── contexts/
+    │   └── ContextProvider.jsx  # Shared counter context
+    ├── App.jsx
+    └── main.jsx
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-  **Synchronized counter** – All 4 counter cards share the same value via Context
+-  **Increment** and ➖ **Decrement** buttons on every card
+-  **Independent components** – Each card is isolated but reads from the same store
+-  Any update in one card is instantly reflected in all other cards
