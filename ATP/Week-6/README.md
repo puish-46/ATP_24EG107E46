@@ -1,22 +1,38 @@
-#  Week 6 – React State Management & MERN Stack
+# Week 6 – React State Management & MERN Stack
 
 This week focuses on **React Context API**, **state management patterns**, and building a **full-stack MERN application** with a RESTful backend and a React frontend.
 
 ---
 
-##  Projects Overview
+## Folder Structure
 
-| Project | Description |
-|---|---|
-| [`user_count_react`](./user_count_react/) | Fetch users from an API and track selection count using React Context |
-| [`counter-state-with-sync-context-store`](./counter-state-with-sync-context-store/) | Synchronized counter across 4 components using a shared Context store |
-| [`context-counter`](./context-counter/) | Combined app with counters, a user form with dynamic table, and user count |
-| [`User-form-with-dynamic-table`](./User-form-with-dynamic-table/) | React form with dynamic table rendering using components |
-| [`mern-mini-employee-app`](./mern-mini-employee-app/) | Full-stack MERN app with CRUD operations on employee records |
+```
+Week-6/
+├── userCountReact/                    # Fetch users from API with Context
+├── counterStateSyncContextStore/      # Synchronized counter using shared Context
+├── contextCounter/                    # Combined counters, form, and user count
+├── userFormWithDynamicTable/          # React form with dynamic table rendering
+├── mernMiniEmployeeApp/               # Full-stack MERN CRUD app
+│   ├── backend/                       # Express + MongoDB API
+│   └── frontend/                      # React + Vite UI
+└── README.md
+```
 
 ---
 
-##  Concepts Covered
+## Projects Overview
+
+| # | Project | Description |
+|---|---------|-------------|
+| 1 | `userCountReact/` | Fetch users from an API and track selection count using React Context |
+| 2 | `counterStateSyncContextStore/` | Synchronized counter across 4 components using a shared Context store |
+| 3 | `contextCounter/` | Combined app with counters, a user form with dynamic table, and user count |
+| 4 | `userFormWithDynamicTable/` | React form with dynamic table rendering using components |
+| 5 | `mernMiniEmployeeApp/` | Full-stack MERN app with CRUD operations on employee records |
+
+---
+
+## Concepts Covered
 
 - **React Context API** – Creating and consuming shared state across components
 - **`useContext` Hook** – Accessing context values deep in the component tree
@@ -31,8 +47,6 @@ This week focuses on **React Context API**, **state management patterns**, and b
 
 ---
 
-
-
-##  Week Summary
+## Week Summary
 
 Week 6 builds on React fundamentals by introducing **state-sharing patterns** via the Context API and explores how to structure a **real-world full-stack application** using the MERN stack with proper routing, form handling, and database integration.
