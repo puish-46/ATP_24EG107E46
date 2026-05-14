@@ -14,12 +14,12 @@ const order = {
 };
 
 //creating a copy of order by using deepshallo operator
-let copyorder=structuredClone(order);
+let copyOrder=structuredClone(order);
 
-//making changes in the copyorder
-copyorder.customer.address.city="Rajasthan";
-copyorder.items[0].price=500;
+//making changes in the copyOrder
+copyOrder.customer.address.city="Rajasthan";
+copyOrder.items[0].price=500;
 
 //printing the both original and copied object
 console.log(order);
-console.log(copyorder);
+console.log(copyOrder);

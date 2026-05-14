@@ -5,8 +5,8 @@ let user = {
 };
 
 //creating a copy of user object using spread operator
-let copyuser={...user, age:25}
+let copyUser={...user, age:25}
 
 //printing both the objects
 console.log(user)
-console.log(copyuser)
+console.log(copyUser)

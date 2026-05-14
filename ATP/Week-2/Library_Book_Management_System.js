@@ -28,14 +28,14 @@ class Book {
 }
 
 // creating 5 books
-let b1=new Book("Harry Potter", "J.K. Rowling", 350);
-let b2=new Book("1984", "George Orwell", 250);
-let b3=new Book("The Hobbit", "J.R.R. Tolkien", 310);
-let b4=new Book("Rich Dad Poor Dad", "Robert Kiyosaki", 200);
-let b5=new Book("The Alchemist", "Paulo Coelho", 180);
+let book1=new Book("Harry Potter", "J.K. Rowling", 350);
+let book2=new Book("1984", "George Orwell", 250);
+let book3=new Book("The Hobbit", "J.R.R. Tolkien", 310);
+let book4=new Book("Rich Dad Poor Dad", "Robert Kiyosaki", 200);
+let book5=new Book("The Alchemist", "Paulo Coelho", 180);
 
 // store books in array
-let books=[b1,b2,b3,b4,b5];
+let books=[book1,book2,book3,book4,book5];
 
 
 // display info of all books
@@ -46,18 +46,18 @@ books.forEach((book)=>{
 
 
 // borrow 2 books
-b1.borrow();
-b3.borrow();
+book1.borrow();
+book3.borrow();
 
 console.log("\nAfter Borrowing 2 Books:");
-console.log(b1.title, "Available:", b1.isAvailable);
-console.log(b3.title, "Available:", b3.isAvailable);
+console.log(book1.title, "Available:", book1.isAvailable);
+console.log(book3.title, "Available:", book3.isAvailable);
 
 
 // return 1 book
 b1.returnBook();
 console.log("\nAfter Returning 1 Book:");
-console.log(b1.title, "Available:", b1.isAvailable);
+console.log(book1.title, "Available:", book1.isAvailable);
 
 
 // count long books (>300 pages)

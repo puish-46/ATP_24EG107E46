@@ -8,23 +8,23 @@ const cart = [
 
 
 //filter method to filter and get only instock products
-const f=cart.filter((item)=>item.inStock==true)
-console.log(f)
+const inStock=cart.filter((item)=>item.inStock==true)
+console.log(inStock)
 
 
 //map method to create a new array with {name,totalprice}
-const m=cart.map((item)=>({name: item.name, totalprice: item.price*item.quantity}))
-console.log(m)
+const bill=cart.map((item)=>({name: item.name, totalprice: item.price*item.quantity}))
+console.log(bill)
 
 
 //reduce method to calculate the grand total of cart value
-const r=cart.reduce((acc,cartobj)=>acc+(cartobj.price*cartobj.quantity),0)
-console.log(r)
+const totalPrice=cart.reduce((acc,cartobj)=>acc+(cartobj.price*cartobj.quantity),0)
+console.log(totalPrice)
 
 //find method to get detailes of "Mouse"
-const f1=cart.find((item)=>item.name=="Mouse")
-console.log(f1)
+const item=cart.find((item)=>item.name=="Mouse")
+console.log(item)
 
 //findIndex method to find the Index of "Keyboard"
-const f2=cart.findIndex((item)=>item.name=="Keyboard")
-console.log(f2)
+const itemIndex=cart.findIndex((item)=>item.name=="Keyboard")
+console.log(itemIndex)

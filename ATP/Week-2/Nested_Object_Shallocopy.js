@@ -9,12 +9,12 @@ const user = {
 };    
 
 //creating a copy of user by using shaloo operator
-let copyuser={...user};
+let copyUser={...user};
 
-//making changes in the copyuser
-copyuser.name="puish";
-copyuser.preferences.theme="white";
+//making changes in the copyUser
+copyUser.name="puish";
+copyUser.preferences.theme="white";
 
 //printing the both original and copied object
 console.log(user);
-console.log(copyuser);
+console.log(copyUser);

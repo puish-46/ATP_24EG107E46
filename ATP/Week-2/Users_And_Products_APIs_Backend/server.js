@@ -65,7 +65,7 @@ app.put('/users',(req,res)=>{
 app.delete('/users/:id',(req,res)=>{
     // get id of user from url parameter
     let idOfUrl=Number(req.params.id)  // {id:5}
-    //
+    //get index of existing user in users array
     let index=users.findIndex(userObj=>userObj.id==idOfUrl)
     // id user not found
     if(index==-1){
@@ -79,7 +79,7 @@ app.delete('/users/:id',(req,res)=>{
 
 
 
-//product api
+//product apis
 let product=[]
 
 
