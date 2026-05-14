@@ -1,3 +1,4 @@
+//finding the smallest number from a given array
 let marks = [90, 78, 65, 98];
 
 // assume first element as smallest

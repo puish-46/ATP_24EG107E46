@@ -1,14 +1,15 @@
-function findBig(a, b, c) {
+//finding biggest of three numbers using function
+function findBig(num1, num2, num3) {
 
     // compare numbers
-    if (a > b && a > c) {
-        return a;
+    if (num1 > num2 && num1 > num3) {
+        return num1;
     } 
-    else if (b > a && b > c) {
-        return b;
+    else if (num2 > num3) {
+        return num2;
     } 
     else {
-        return c;
+        return num3;
     }
 }
 
