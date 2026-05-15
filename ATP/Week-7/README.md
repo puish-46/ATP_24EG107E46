@@ -55,3 +55,13 @@ cd blogAppFrontend
 npm install
 npm run dev
 ```
+
+
+**Deployment :**
+```bash
+Frontend: Vercel
+https://blog-app-frontend-three-beta.vercel.app
+
+Backend: Render
+https://blog-app-backend-3iko.onrender.com
+```
